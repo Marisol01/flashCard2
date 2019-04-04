@@ -9,6 +9,7 @@ import { Container, } from "semantic-ui-react";
 import FetchUser from './components/FetchUser';
 import ProtectedRoute from './components/ProtectedRoute';
 
+const App = () => (
 
 <div>
  <Navbar />
@@ -24,5 +25,7 @@ import ProtectedRoute from './components/ProtectedRoute';
    </Container>
  </FetchUser>
 </div>
+
+)
 
 export default App;
