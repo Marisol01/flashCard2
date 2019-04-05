@@ -32,7 +32,7 @@ const App = () => (
    </Container>
  </FetchUser>
 </div>
-
+ 
 )
 
 export default App;
