@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :cards
+    resources :decks
   end
 end
