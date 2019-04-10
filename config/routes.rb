@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     root 'api/decks#index'
 
   namespace :api do
+    resources :decks
     resources :cards
     resources :decks
   end
