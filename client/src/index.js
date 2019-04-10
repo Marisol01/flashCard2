@@ -17,3 +17,9 @@ ReactDOM.render(
  document.getElementById('root')
 );
 
+export function saveDeck (deck) {
+  return {
+    type: SaveDeck,
+    deck,
+  }
+}

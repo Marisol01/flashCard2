@@ -1,0 +1,22 @@
+.stopwatch {
+  box-sizing: border-box;
+  background: lightgray;
+  padding: 20px;
+  margin-right: 80%;
+  margin-top: 6%;
+  text-align: center;
+
+}
+
+.stopwatch-header {
+  text-align: center;
+  color: darkorchid;
+  font-size: 20px;
+  font: status-bar;
+}
+
+.stopwatch-display {
+  text-align: center;
+  font-size: 18px;
+}
+
