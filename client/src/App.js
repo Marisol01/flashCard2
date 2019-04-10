@@ -8,6 +8,7 @@ import { Switch, Route, } from 'react-router-dom';
 import { Container, } from "semantic-ui-react";
 import FetchUser from './components/FetchUser';
 import ProtectedRoute from './components/ProtectedRoute';
+import Card from './components/Card'
 
 const App = () => (
 
@@ -20,6 +21,7 @@ const App = () => (
        <Route exact path="/" component={Home} />
        <Route exact path="/login" component={Login} />
        <Route exact path="/register" component={Register} />
+       <Route exact path="/card" component={Card} />
        <Route component={NoMatch} />
      </Switch>
    </Container>
