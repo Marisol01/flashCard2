@@ -1,10 +1,14 @@
 import React from 'react'
 import { AuthConsumer, } from "../providers/AuthProvider";
-import { Menu, } from 'semantic-ui-react'
-import { Link, withRouter, } from 'react-router-dom'
+import { Menu, } from 'semantic-ui-react';
+import { Link, withRouter, } from 'react-router-dom';
+import  Stylebar  from './Stylebar';
+import './Backdrop/Backdrop.css';
+import './SideDrawer/SideDrawer.css';
+import './Toolbar/Toolbar.css';
 
 class Navbar extends React.Component {
-  
+
   rightNavItems = () => {
     const { auth: { user, handleLogout, }, location, } = this.props;
     
@@ -41,6 +45,7 @@ class Navbar extends React.Component {
   
   render() {
     return (
+      <Stylebar>
       <div>
         <Menu pointing secondary>
           <Link to='/'>
@@ -53,6 +58,7 @@ class Navbar extends React.Component {
             { this.rightNavItems() }
         </Menu>
       </div>
+      </Stylebar>
     )
   }
 }
@@ -65,6 +71,7 @@ export class ConnectedNavbar extends React.Component {
           <Navbar { ...this.props } auth={auth} />
         }
       </AuthConsumer>
+ 
     )
   }
 }

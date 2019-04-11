@@ -18,10 +18,6 @@ ActiveRecord::Schema.define(version: 2019_04_04_164734) do
   create_table "cards", force: :cascade do |t|
     t.text "front"
     t.text "back"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "decks", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
