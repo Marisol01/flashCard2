@@ -24,12 +24,6 @@ ActiveRecord::Schema.define(version: 2019_04_04_164734) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "decks", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "provider", default: "email", null: false
     t.string "uid", default: "", null: false
