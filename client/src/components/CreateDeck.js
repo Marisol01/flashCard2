@@ -1,107 +1,67 @@
-import React, { Component } from 'react'
-import { StyleSheet, View, Text } from 'react'
-import { connect } from 'react-redux'
-import { saveDeck } from '../actions'
-import Card from './Card'
-import CardSection from './CardSection'
-import Input from './Input'
-import DButton from './DButton'
-import { saveDeckAPI } from '../utils/api'
-
+import React, { Component } from 'react';
+import axios from 'axios';
+import Decks from './Decks';
+import ShowDeck from './ShowDeck';
+      //CreateDeck
 class CreateDeck extends Component {
-  state = {
-    title: ''
+            //{Deck: []}
+  state = { Deck: [] }
+
+
+  componentDidMount() {
+    // grab post from db decks
+    axios.get('/api/decks')
+      .then( res => {    //decks
+        this.setState({ decks: res.data })
+      })
+      .catch( err => {
+        console.log(err)
+      })
   }
 
-  handleCreate = () => {
-    const { dispatch, navigation } = this.props
-
-    const newDeck = {
-      key: this.state.title.replace(/[^a-z0-9]/gmi, ''),
-      entry: {
-        title: this.state.title,
-        questions: []
-      }
-    }
-
-    dispatch(saveDeck({
-      [newDeck.key]: newDeck.entry
-    }))
-
-    navigation.navigate('ShowDeck', { deckId: newDeck.key, deckTitle: newDeck.entry.title })
-
-    this.setState({ title: '' })
-
-    saveDeckAPI(newDeck)
-
+  displayDeck = () => {
+    // editPost={this.editPost} add   return this.state.decks.map( d => <Deck key= {d.id} {...d} />)
+    return this.state.decks.map( d => <Decks key={d.id} {...d} />)
+  }
+  //addDeck = (Deck) {}
+  addDeck = (deck) => {
+    axios.post('/api/decks',  deck )
+      .then( res => {
+        const { decks } = this.state
+        this.setState({ departments: [...decks, res.data] })
+      })
+      .catch( err => {
+        console.log(err)
+      })
+  }
+    //editDeck = (deck)
+  editDeck = (deck) => {
+    axios.put(`/api/decks/${deck.id}`, { deck })
+      .then( res => {
+        const decks = this.state.decks.map( p => {
+          if (p.id === deck.id)
+            return res.data
+          return p
+        })
+        this.setState({ decks })
+      })
+      .catch( err => {
+        console.log(err)
+      })
   }
 
   render() {
-    const {
-      container,
-      createDeckContainer,
-      titleContainer,
-      titleStyle,
-      inputContainer,
-      buttonContainer
-    } = styles
 
-    return (
-      <View style={container}>
-        <Card>
-          <CardSection>
-            <View style={createDeckContainer}>
-              <View style={titleContainer}>
-                <Text style={titleStyle}>What is the title of your new deck?</Text>
-              </View>
-              <View style={inputContainer}>
-                <Input
-                  placeholder="Deck title"
-                  value={this.state.title}
-                  onChangeText={(title) => this.setState({ title }) } />
-              </View>
-              <View style={buttonContainer}>
-                <DButton
-                  disabled={this.state.title.length ? false : true}
-                  onPress={this.handleCreate}
-                >
-                  Create
-                </DButton>
-              </View>
-            </View>
-          </CardSection>
-        </Card>
-      </View>
+
+    return(
+      <div>
+      <h1>Your Decks</h1>
+        { this.displayDeck() }
+        <ShowDeck addDepartment={this.addDepartment} editDepartment={this.editDepartment} />
+    </div>
+
     )
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'space-around',
-  },
-  createDeckContainer: {
-    flex: 1,
-    justifyContent: 'space-around',
-    height: 300,
-  },
-  titleContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  titleStyle: {
-    fontSize: 30,
-    lineHeight: 50,
-    textAlign:'center',
-  },
-  inputContainer: {
-    flex: 1,
-  },
-  buttonContainer: {
-    height: 50,
-  },
-})
-
-export default connect()(CreateDeck)
+export default CreateDeck;

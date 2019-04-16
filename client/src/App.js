@@ -1,4 +1,4 @@
-import React, { Fragment, } from 'react';
+import React, { Fragment, Component} from 'react';
 import Home from './components/Home';
 import NoMatch from './components/NoMatch';
 import Navbar from './components/Navbar';
@@ -9,6 +9,8 @@ import { Container, } from "semantic-ui-react";
 import FetchUser from './components/FetchUser';
 import ProtectedRoute from './components/ProtectedRoute';
 import Card from './components/Card'
+import Decks from './components/Decks';
+import ShowDeck from './components/ShowDeck';
 
 const App = () => (
 
@@ -22,6 +24,8 @@ const App = () => (
        <Route exact path="/login" component={Login} />
        <Route exact path="/register" component={Register} />
        <Route exact path="/card" component={Card} />
+       <Route exect path= "/Decks" component={Decks} />
+       <Route exact path= "/Decks/:id" component={ShowDeck} />
        <Route component={NoMatch} />
      </Switch>
    </Container>
@@ -29,5 +33,6 @@ const App = () => (
 </div>
 
 )
+
 
 export default App;
