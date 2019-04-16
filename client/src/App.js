@@ -8,8 +8,8 @@ import { Switch, Route, } from 'react-router-dom';
 import { Container, } from "semantic-ui-react";
 import FetchUser from './components/FetchUser';
 import ProtectedRoute from './components/ProtectedRoute';
-import Card from './components/Card';
-
+import Card from './components/Card'
+// import ShowDeck from './components/ShowDeck';
 
 const App = () => (
 
@@ -28,7 +28,7 @@ const App = () => (
    </Container>
  </FetchUser>
 </div>
-
+ 
 )
 
 export default App;
