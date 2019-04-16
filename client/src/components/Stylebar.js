@@ -5,6 +5,7 @@ import Backdrop from './Backdrop/Backdrop';
 // import './Backdrop/Backdrop.css';
 // import './SideDrawer/SideDrawer.css';
 // import './Toolbar/Toolbar.css';
+import Timer from './Timer/Timer';
 
 
 class Stylebar extends Component {
@@ -34,7 +35,8 @@ class Stylebar extends Component {
        <SideDrawer show={this.state.sideDrawerOpen} />
        {backdrop}
        <main style={{marginTop: '64px'}}>
-         <p>Page Content</p>
+       <Timer />
+         <p> </p>
        </main>
      </div>
    );
