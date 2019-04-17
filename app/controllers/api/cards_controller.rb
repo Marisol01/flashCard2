@@ -36,6 +36,7 @@ class Api::CardsController < ApplicationController
   private
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   def card_params
     params.require(:card).permit(:front, :back)
   end
@@ -44,6 +45,16 @@ class Api::CardsController < ApplicationController
       params.require(:card).permit(:front, :back)
     end
 >>>>>>> added focus button and deck
+=======
+    def  card_params
+      params.require(:card).permit(:front, :back)
+    end
+=======
+  def card_params
+    params.require(:card).permit(:front, :back)
+  end
+>>>>>>> additional edits
+>>>>>>> additional edits
 
 
 end
