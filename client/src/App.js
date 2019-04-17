@@ -12,10 +12,6 @@ import Card from './components/Card';
 import Decks from './components/Decks';
 import ShowDeck from './components/ShowDeck'
 import DeckFocus from './components/DeckFocus';
-import Decks from './components/Decks';
-import ShowDeck from './components/ShowDeck'
-
-
 
 
 
