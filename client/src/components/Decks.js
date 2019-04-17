@@ -111,4 +111,8 @@ import {Link} from 'react-router-dom';
 //     }
 // }
 
+<<<<<<< HEAD
 export default Decks;
+=======
+export default Decks;
+>>>>>>> master
