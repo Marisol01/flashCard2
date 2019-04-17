@@ -64,36 +64,4 @@ class CreateDeck extends Component {
   }
 }
 
-<<<<<<< HEAD
 export default CreateDeck;
-=======
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'space-around',
-  },
-  createDeckContainer: {
-    flex: 1,
-    justifyContent: 'space-around',
-    height: 300,
-  },
-  titleContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  titleStyle: {
-    fontSize: 30,
-    lineHeight: 50,
-    textAlign:'center',
-  },
-  inputContainer: {
-    flex: 1,
-  },
-  buttonContainer: {
-    height: 50,
-  },
-})
-
-export default connect()(CreateDeck)
->>>>>>> deck added
