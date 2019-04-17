@@ -1,4 +1,4 @@
-import React, { Fragment, } from 'react';
+import React, { Fragment, Component} from 'react';
 import Home from './components/Home';
 import NoMatch from './components/NoMatch';
 import Navbar from './components/Navbar';
@@ -23,6 +23,8 @@ const App = () => (
        <Route exact path="/login" component={Login} />
        <Route exact path="/register" component={Register} />
        <Route exact path="/card" component={Card} />
+       <Route exect path= "/Decks" component={Decks} />
+       <Route exact path= "/Decks/:id" component={ShowDeck} />
        <Route component={NoMatch} />
      </Switch>
    </Container>
@@ -30,5 +32,6 @@ const App = () => (
 </div>
  
 )
+
 
 export default App;
