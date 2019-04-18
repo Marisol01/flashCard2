@@ -28,21 +28,10 @@ class Api::CardsController < ApplicationController
   end
 
   def focusecard
-    card = Card.find(params [:id])
-    card.update(focused: !card.focused)
-    render json: card
-  end
-
-  def focused
-    render json: Card.where(focused: true)
-  end
-
-  def focusecard
     card = Card.find(params[:id])
     card.update(focused: !card.focused)
     render json: card
   end
-
 
   private
 

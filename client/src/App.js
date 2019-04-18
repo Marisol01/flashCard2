@@ -21,11 +21,6 @@ import DeckHTML from './components/DeckHTML';
 import Decks from './components/Decks';
 import ShowDeck from './components/ShowDeck';
 
-<<<<<<< HEAD
-=======
-import DeckHTML from './components/DeckHTML';
-
->>>>>>> seed file addition
 const App = () => (
 
 <div>
