@@ -1,16 +1,50 @@
 import React, { Component } from 'react';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import {  Button, Icon } from 'semantic-ui-react';
-
-
+import axios from 'axios';
 
 
 class Card extends Component {
     state = { cards: [], };
+
+    focused = id => {
+      let { cards, } = this.state;
+      axios.put(`/api/cards/${id}`)
+      .then( ({ data }) => {
+        const cards = this.state.cards.map( card => {
+          if (card.id === id)
+            return data
+          return card
+        });
+
+        this.setState({ cards });
+      });
+  }
+
+    constructor() {
+      super();
+      this.state = {
+        focused: false,
+      };
+      this.handleClick = this.handleClick.bind(this);
+    } 
+
+    handleClick() {
+      this.setState({ active: !this.state.active })
+      this.setState({
+        focused: !this.state.focused,
+        });
+    }
     
     render() {
+
+      const label = this.state.focused ? 'Focus Deck' : 'Add to Focus';
+      const { active } = this.state
+
+
+
         return(
-            <>
+  <>
             <Flippy
                 flipOnHover={false} // default false
                 flipOnClick={false} // default false
@@ -50,9 +84,10 @@ class Card extends Component {
        <Icon name='thumbs up' />
       </Button>
 
-    <Button floated='middle' icon labelPosition='right'>
-     Save to Foucs Deck
-     <Icon name='star outline' />
+    <Button toggle active={active} onClick={this.handleClick} 
+      onClick={this.handleClick}>
+      {label}
+    
     </Button>
 
     <Button icon inverted color='red'>
