@@ -22,12 +22,28 @@ class Api::CardsController < ApplicationController
     Card.find(params[:id]).destroy
     render json: { message: 'Card deleted' }
   end
+  
+  def focused
+    render json: Card.where(focused: true)
+  end
+
+  def focusecard
+    card = Card.find(params [:id])
+    card.update(focused: !card.focused)
+    render json: card
+  end
 
   private
 
+<<<<<<< HEAD
   def card_params
     params.require(:card).permit(:front, :back)
   end
+=======
+    def  card_params
+      params.require(:card).permit(:front, :back)
+    end
+>>>>>>> added focus button and deck
 
 
 end

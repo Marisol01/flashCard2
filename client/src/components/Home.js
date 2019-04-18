@@ -1,13 +1,27 @@
 import React from 'react';
 import { Link, } from 'react-router-dom';
-import { Header, } from 'semantic-ui-react';
+import { Header, Card, Image } from 'semantic-ui-react';
 
 const Home = () => (
+
+  <>
   <Header as="h3" textAlign="center">Flash Cards
    <Link to="/card">Go to Cards</Link>
   </Header>
+  
+    <Card>
+      <Image src='desktop/code.png' />
+    <Card.Content>
+      <Card.Header>Focus Deck</Card.Header>
+      <Card.Description>This Deck is for your cards to focus on.</Card.Description>
+    </Card.Content>
 
-)
+    <Link to="/deckfocus">View your Focus deck</Link>
+
+    </Card>
+    </>
+    )
+  
 
 
 

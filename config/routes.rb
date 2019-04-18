@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :decks
     resources :cards
+    get 'focused', to: 'cards#focused'
+    put 'focuscard', to: 'cards#focuscard'
   end
 end
