@@ -32,11 +32,11 @@ class DeckHTML extends Component {
             //<Link to={`/Decks/${deck.id}`} key={deck.id}>{deck.name}</Link>
         )
         };
-    };
+    
     
     state = { cards: [], };
 
-    render(); {
+    render() {
     const keys = [
         "FrontSide",
         "BackSide",
