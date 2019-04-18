@@ -1,5 +1,6 @@
 import React from 'react';
 import './SideDrawer.css';
+import {Link} from 'react-router-dom';
 
 const sideDrawer = props => {
  let drawerClasses = 'side-drawer';
@@ -9,15 +10,40 @@ const sideDrawer = props => {
  return (
    <nav className={drawerClasses}>
      <ul>
-       <li><a href='/'>JavaScript</a></li>
+       <li><Link to={{
+                pathname:`/card`, //api flow for this?
+                state: {
+                  Decks: true
+              }
+            }}>JavaScript</Link></li>
 
-       <li><a href='/'>Ruby</a></li>
+       <li><Link to={{
+                pathname:`/card`, //api flow for this?
+                state: {
+                  Decks: true
+                }
+               }} >Ruby</Link></li>
 
-       <li><a href='/'>HTML</a></li>
+        <li><Link to={{
+                pathname:`/card`, //api flow for this?
+                state: {
+                  Decks: true
+              }
+            }}>HTML</Link></li>
 
-       <li><a href='/'>CSS</a></li>
+        <li><Link to={{
+                pathname:`/card`, //api flow for this?
+                state: {
+                  Decks: true
+              }
+            }}>CSS</Link></li>
 
-       <li><a href='/'>Focus Deck</a></li>
+        <li><Link to={{
+                pathname:`/card`, //api flow for this?
+                state: {
+                  Decks: true
+              }
+            }}>Focus Deck</Link></li>
      </ul>
    </nav>
  );
