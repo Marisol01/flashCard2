@@ -9,14 +9,16 @@ import { Container, } from "semantic-ui-react";
 import FetchUser from './components/FetchUser';
 import ProtectedRoute from './components/ProtectedRoute';
 import Card from './components/Card';
+<<<<<<< HEAD
 
 import Decks from './components/Decks';
 import ShowDeck from './components/ShowDeck'
 
+=======
+>>>>>>> corrected conflicts again
 import DeckFocus from './components/DeckFocus';
 import Decks from './components/Decks';
 import ShowDeck from './components/ShowDeck'
->>>>>>> additional edits
 
 
 const App = () => (
@@ -33,8 +35,6 @@ const App = () => (
        <Route exact path="/card" component={Card} />
        <Route exect path= "/Decks" component={Decks} />
        <Route exact path= "/Decks/:id" component={ShowDeck} />
-       <Route exact path= "/Card/:id" component={Card} />
-
        <Route exact path= "/Card/:id" component={Card} />
        <Route component={NoMatch} />
      </Switch>
