@@ -33,6 +33,14 @@ class Api::CardsController < ApplicationController
     render json: card
   end
 
+<<<<<<< HEAD
+=======
+  private
+
+    def  card_params
+      params.require(:card).permit(:front, :back)
+    end
+>>>>>>> added focus button and deck
 
   private
 
