@@ -9,8 +9,9 @@ import { Container, } from "semantic-ui-react";
 import FetchUser from './components/FetchUser';
 import ProtectedRoute from './components/ProtectedRoute';
 import Card from './components/Card';
+import Decks from './components/Decks';
+import ShowDeck from './components/ShowDeck'
 import DeckFocus from './components/DeckFocus';
-
 
 const App = () => (
 
@@ -27,7 +28,8 @@ const App = () => (
        <ProtectedRoute exact path='/deckfocus' component={DeckFocus} />
        <Route exect path= "/Decks" component={Decks} />
        <Route exact path= "/Decks/:id" component={ShowDeck} />
-
+       <Route exact path= "/Card/:id" component={Card} />
+       <ProtectedRoute exact path='/deckfocus' component={DeckFocus} />
        <Route component={NoMatch} />
      </Switch>
    </Container>
