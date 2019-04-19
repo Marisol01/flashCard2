@@ -26,8 +26,10 @@ const App = () => (
        <Route exact path="/login" component={Login} />
        <Route exact path="/register" component={Register} />
        <Route exact path="/card" component={Card} />
+       <ProtectedRoute exact path='/deckfocus' component={DeckFocus} />
        <Route exect path= "/Decks" component={Decks} />
        <Route exact path= "/Decks/:id" component={ShowDeck} />
+       <Route exact path= "/Card/:id" component={Card} />
        <ProtectedRoute exact path='/deckfocus' component={DeckFocus} />
        <Route component={NoMatch} />
      </Switch>

@@ -51,17 +51,14 @@ import {Link} from 'react-router-dom';
         const { decks, } = this.state;
         return decks.map( deck => {
           return (
-            <Link to={{
-              pathname:`/ShowDeck`,
-              state: {
-                Decks: true
-            }
-          }}>Ruby
-          React
-          HTML
-          CSS
-          Focus Deck</Link>
-
+            <div>
+              <Link to={{
+                pathname:`/card`, //api flow for this?
+                state: {
+                  Decks: true
+              }
+            }}>{deck.name}</Link>
+          </div>
             //<Link to={`/Decks/${deck.id}`} key={deck.id}>{deck.name}</Link>
           )
         })
@@ -112,3 +109,4 @@ import {Link} from 'react-router-dom';
 // }
 
 export default Decks;
+

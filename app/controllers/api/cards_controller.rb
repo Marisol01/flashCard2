@@ -13,7 +13,7 @@ class Api::CardsController < ApplicationController
   end
 
   def update
-    card = Card.find()params[:id]
+    card = Card.find(params[:id])
     # card.update( ) !card.complete )
     render json: card
   end
@@ -35,9 +35,7 @@ class Api::CardsController < ApplicationController
 
   private
 
-    def  card_params
-      params.require(:card).permit(:front, :back)
-    end
-
-
+  def card_params
+    params.require(:card).permit(:front, :back)
+  end
 end
