@@ -17,11 +17,6 @@ import DeckHTML from './components/DeckHTML';
 import Decks from './components/Decks';
 import ShowDeck from './components/ShowDeck';
 
-import DeckHTML from './components/DeckHTML';
-import Decks from './components/Decks';
-import ShowDeck from './components/ShowDeck';
-
-
 const App = () => (
 
 <div>
