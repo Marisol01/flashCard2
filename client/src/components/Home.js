@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, } from 'react-router-dom';
 import { Header, Card, Image } from 'semantic-ui-react';
+import code from './imgs/code.png';
 
 const Home = () => (
 
@@ -10,7 +11,7 @@ const Home = () => (
   </Header>
   
     <Card>
-      <Image src='desktop/code.png' />
+      <Image src={code}/>
     <Card.Content>
       <Card.Header>Focus Deck</Card.Header>
       <Card.Description>This Deck is for your cards to focus on.</Card.Description>
