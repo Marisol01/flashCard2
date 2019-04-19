@@ -33,7 +33,6 @@ class Api::CardsController < ApplicationController
     render json: card
   end
 
-
   private
 
   def card_params

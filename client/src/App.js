@@ -9,9 +9,10 @@ import { Container, } from "semantic-ui-react";
 import FetchUser from './components/FetchUser';
 import ProtectedRoute from './components/ProtectedRoute';
 import Card from './components/Card';
-import Decks from './components/Decks';
-import ShowDeck from './components/ShowDeck'
 import DeckFocus from './components/DeckFocus';
+import Decks from './components/Decks';
+import ShowDeck from './components/ShowDeck';
+
 
 const App = () => (
 
