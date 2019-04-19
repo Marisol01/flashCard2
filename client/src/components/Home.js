@@ -3,7 +3,6 @@ import { Link, } from 'react-router-dom';
 import { Header, Card, Image } from 'semantic-ui-react';
 import code from './imgs/code.png';
 
-
 const Home = () => (
 
   <>
