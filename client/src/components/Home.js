@@ -10,7 +10,6 @@ import Rubyimg from './imgs/Rubyimg.png';
 
 
 
-
 const Home = () => (
 
   <>

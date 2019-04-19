@@ -18,6 +18,9 @@ import DeckCSS from './components/DeckCSS';
 import DeckRuby from './components/DeckRuby';
 
 import DeckHTML from './components/DeckHTML';
+import Decks from './components/Decks';
+import ShowDeck from './components/ShowDeck';
+
 
 const App = () => (
 
