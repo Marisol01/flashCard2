@@ -1,6 +1,7 @@
 import React from 'react';
 import './SideDrawer.css';
 import {Link} from 'react-router-dom';
+import { Icon } from 'semantic-ui-react';
 
 const sideDrawer = props => {
  let drawerClasses = 'side-drawer';
@@ -15,8 +16,10 @@ const sideDrawer = props => {
       <div class="body">
       <div class="search-box">
         <input class="search-txt" type="text" name="" placeholder="Search"></input>
-        <img src="iconfinder_11_Search_106236.png" class="search-btn"> 
-        </img>
+        <Icon inverted color='gray' name='search' />
+        <div class="search-btn">
+        
+        </div>
       </div>
       </div>
           
