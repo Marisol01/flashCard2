@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Flippy, { FrontSide, BackSide } from 'react-flippy';
-import {  Button, Icon } from 'semantic-ui-react';
+import Flippy, { FrontSide, BackSide, } from 'react-flippy';
+import {  Button, Icon, cards } from 'semantic-ui-react';
 import axios from 'axios';
 
 
@@ -62,7 +62,7 @@ class Card extends Component {
         }}
       >
         <button type="button" onClick={() => this.flippyHorizontal.toggle()}>Flip!</button>
-      Question
+        <h1><pre>{`What code indicates document type?` }</pre></h1>
     </FrontSide>
     <BackSide
       style={{ 
@@ -70,7 +70,7 @@ class Card extends Component {
           color: '#fff',
           }}>
             <button type="button" onClick={() => this.flippyHorizontal.toggle()}>Flip!</button>
-        Answer
+          <h1><pre>{`<!DOCTYPE>` }</pre></h1>
     </BackSide>
   </Flippy>
 

@@ -1,0 +1,5 @@
+front,back,focused,deck_id
+"question1","answer",false,1
+"question2","answer",false,1
+"question1","answer",false,2
+"etc","etc",false,"etc"

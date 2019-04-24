@@ -39,7 +39,7 @@ const sideDrawer = props => {
                }} >Ruby</Link></li>
 
         <li><Link to={{
-                pathname:`/card`, //api flow for this?
+                pathname:`/DeckHTML`, //api flow for this?
                 state: {
                   Decks: true
               }
