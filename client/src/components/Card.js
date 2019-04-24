@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Flippy, { FrontSide, BackSide } from 'react-flippy';
-import {  Button, Icon } from 'semantic-ui-react';
+import Flippy, { FrontSide, BackSide, } from 'react-flippy';
+import {  Button, Icon, cards } from 'semantic-ui-react';
 import axios from 'axios';
 
 
