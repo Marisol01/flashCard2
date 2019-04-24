@@ -17,6 +17,7 @@ import DeckJavaScript from './components/DeckJavaScript';
 import DeckCSS from './components/DeckCSS';
 import DeckRuby from './components/DeckRuby';
 
+import DeckHTML from './components/DeckHTML';
 
 const App = () => (
 
@@ -38,7 +39,6 @@ const App = () => (
        <Route exect path= "/Decks" component={Decks} />
        <Route exact path= "/Decks/:id" component={ShowDeck} />
        <Route exact path= "/Card/:id" component={Card} />
-
        <Route component={NoMatch} />
      </Switch>
    </Container>
