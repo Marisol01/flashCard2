@@ -18,7 +18,7 @@ class Api::CardsController < ApplicationController
     render json: card
   end
 
-  def destroy  
+  def destroy
     Card.find(params[:id]).destroy
     render json: { message: 'Card deleted' }
   end
@@ -28,7 +28,7 @@ class Api::CardsController < ApplicationController
   end
 
   def focusecard
-    card = Card.find(params [:id])
+    card = Card.find(params[:id])
     card.update(focused: !card.focused)
     render json: card
   end
