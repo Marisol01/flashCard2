@@ -16,7 +16,7 @@ const sideDrawer = props => {
       <div class="body">
       <div class="search-box">
         <input class="search-txt" type="text" name="" placeholder="Search"></input>
-        <Icon inverted color='gray' name='search' />
+        <Icon inverted color='white' name='search' />
         <div class="search-btn">
         
         </div>

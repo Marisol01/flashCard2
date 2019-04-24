@@ -54,7 +54,7 @@ class Card extends Component {
     // to use toggle method like this.flippy.toggle()
     // if you pass isFlipped prop component will be controlled component.
     // and other props, which will go to div
-                style={{ width: '800px', height: '500px' }} /// these are optional style, it is not necessary
+                style={{ width: '40em', height: '20em' }} /// these are optional style, it is not necessary
             >
     <FrontSide
       style={{
@@ -94,7 +94,7 @@ class Card extends Component {
        <Icon name='thumbs down' />
       </Button>
 
-    <Button floated='right' icon labelPosition='right'>
+    <Button icon labelPosition='right'>
       Next
       <Icon name='right arrow' />
     </Button>
