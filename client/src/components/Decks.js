@@ -6,15 +6,8 @@ import Button from 'react';
 import ShowDeck from './ShowDeck';
 import CreateDeck from './CreateDeck';
 import {Link} from 'react-router-dom';
+import CsvParse from '@vtex/react-csv-parse';
 
-// class Deck extends React.Component {
-//     state = {
-//     Ruby:[front:'', back: ''],
-//     React:[front:'', back: ''],
-//     HTML:[front:'', back: ''],
-//     CSS:[front:'', back: ''],
-//     Focus_Deck:[]
-//     }
 
 // const Decks = (props) => (
 //   <div>
@@ -35,17 +28,28 @@ import {Link} from 'react-router-dom';
 //    )
 
     class Decks extends Component {
-        state = {
-          decks: [
-            { id: 1, name: "Ruby", complete: true, },
-            { id: 2, name: "React", complete: true, },
-            { id: 3, name: "HTML", complete: true, },
-            { id: 4, name: "CSS", complete: true, },
-            { id: 5, name: "Focus Deck", complete: true, },
-          ]
-        };
       
+      constructor (props){
+        super(props);
+        this.state = {
+          cards: []
+        };
+      }
 
+        // state = {
+        //   decks: [
+        //     { id: 1, name: "Ruby", complete: true, },
+        //     { id: 2, name: "React", complete: true, },
+        //     { id: 3, name: "HTML", complete: true, },
+        //     { id: 4, name: "CSS", complete: true, },
+        //     { id: 5, name: "Focus Deck", complete: true, },
+        //   ]
+        // };
+      
+        handleData = data => {
+          this.setState({ cards: data })
+     
+        }
         //Links to ShowDeck from react-dom
       renderDeck = () => {
         const { decks, } = this.state;
@@ -65,48 +69,29 @@ import {Link} from 'react-router-dom';
       };
       
         render() {
+          const keys = [
+            "FrontSide",
+            "BackSide",
+          ]
           return (
+            <>
+            <CsvParse
+             keys={keys}
+             onDataUploaded={this.handleData}
+             render={onChange => <input type="file" onChange={onChange} />}
+          
+           />
             <div>
               <ul>
                 { this.renderDeck() }
               </ul>
             </div>
+            </>
           )
         }
       }
 
-
-        
-            //1. get state established....reference first React todo lecture where Henry hard coded todos default states
-            //2. get decks to render
-            //3. map function after getting decks to render (mapping is done in render)
-
-
-    // render() {
-    //     const { name } = this.props
-    //       return(
-    //         <>
-    //         <Grid>
-    //         <Grid.Column>
-    //         <Card>
-    //           <Image src='https://seoexpertbrad.com/wp-content/uploads/2018/01/Fake-Amazon-Reviews.jpg' />
-    //         <Card.Content>{name}</Card.Content>
-    //         </Card>
-    //         </Grid.Column>
-    //         </Grid>
-    //         </>
-    //     )
-    //   }
-    // }
-  
-//     render() {
-//       const {name} = this.props
-  
-//       return(
-//           <div>kjgfjg</div>
-//       )
-//     }
-// }
+    
 
 export default Decks;
 

@@ -34,4 +34,9 @@ class Api::DecksController < ApplicationController
     params.require(:deck).permit(:name)
   end
 
+
+# handledata function to send csv parse to backend then have component call the data?
+
+
+
 end
