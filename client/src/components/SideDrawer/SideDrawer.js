@@ -25,28 +25,28 @@ const sideDrawer = props => {
           
 
        <li><Link to={{
-                pathname:`/card`, //api flow for this?
+                pathname:`/deckjavascript`, //api flow for this?
                 state: {
                   Decks: true
               }
             }}>JavaScript</Link></li>
 
        <li><Link to={{
-                pathname:`/card`, //api flow for this?
+                pathname:`/deckruby`, //api flow for this?
                 state: {
                   Decks: true
                 }
                }} >Ruby</Link></li>
 
         <li><Link to={{
-                pathname:`/card`, //api flow for this?
+                pathname:`/deckhtml`, //api flow for this?
                 state: {
                   Decks: true
               }
             }}>HTML</Link></li>
 
         <li><Link to={{
-                pathname:`/card`, //api flow for this?
+                pathname:`/deckcss`, //api flow for this?
                 state: {
                   Decks: true
               }
