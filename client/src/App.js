@@ -12,6 +12,10 @@ import Card from './components/Card';
 import DeckFocus from './components/DeckFocus';
 import Decks from './components/Decks';
 import ShowDeck from './components/ShowDeck';
+import DeckHtml from './components/DeckHtml';
+import DeckJavaScript from './components/DeckJavaScript';
+import DeckCSS from './components/DeckCSS';
+import DeckRuby from './components/DeckRuby';
 
 
 const App = () => (
@@ -27,10 +31,14 @@ const App = () => (
        <Route exact path="/register" component={Register} />
        <Route exact path="/card" component={Card} />
        <ProtectedRoute exact path='/deckfocus' component={DeckFocus} />
+       <Route exact path='/deckcss' component={DeckCSS} />
+       <Route exact path='/deckhtml' component={DeckHtml} />
+       <Route exact path='/deckruby' component={DeckRuby} />
+       <Route exact path='/deckjavascript' component={DeckJavaScript} />
        <Route exect path= "/Decks" component={Decks} />
        <Route exact path= "/Decks/:id" component={ShowDeck} />
        <Route exact path= "/Card/:id" component={Card} />
-       <ProtectedRoute exact path='/deckfocus' component={DeckFocus} />
+
        <Route component={NoMatch} />
      </Switch>
    </Container>

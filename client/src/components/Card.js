@@ -62,7 +62,7 @@ class Card extends Component {
         }}
       >
         <button type="button" onClick={() => this.flippyHorizontal.toggle()}>Flip!</button>
-      Question
+        <h1 align="center">Your saved Focus card</h1>
     </FrontSide>
     <BackSide
       style={{ 
@@ -70,7 +70,7 @@ class Card extends Component {
           color: '#fff',
           }}>
             <button type="button" onClick={() => this.flippyHorizontal.toggle()}>Flip!</button>
-        Answer
+            <h1 align="center">Answer to your Focus question</h1>
     </BackSide>
   </Flippy>
 
