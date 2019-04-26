@@ -1,6 +1,7 @@
 import React from 'react';
 import { AuthConsumer, } from "../providers/AuthProvider";
 import { Button, Form, Segment, Header, } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 class Login extends React.Component {
   state = { email: '', password: '' }
@@ -32,18 +33,16 @@ class Login extends React.Component {
             placeholder='Email'
             onChange={this.handleChange}
           />
-          <Form.Input
-            label="Password"
-            required
-            name='password'
-            value={password}
-            placeholder='Password'
-            type='password'
-            onChange={this.handleChange}
-          />
+
+      <Segment textAlign='center' basic>
+        <Link to='/register'>
+          <Button primary type='register'>Register</Button>
+        </Link>
+      </Segment>
           <Segment textAlign='center' basic>
             <Button primary type='submit'>Submit</Button>
           </Segment>
+
         </Form>
       </Segment>
     )

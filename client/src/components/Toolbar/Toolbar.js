@@ -13,9 +13,12 @@ const toolbar = props => (
      <div className='toolbar_navigation-items'>
        <ul>
          <li><a href='/'>My Decks</a></li>
-         <li><a href='/'>Find Code Cards</a></li>
          <li><a href='/'>Study Session</a></li>
          <li><a href='/'>User</a></li>
+         <li><a href='/'>Register</a></li>
+
+
+
        </ul>
      </div>
    </nav>
